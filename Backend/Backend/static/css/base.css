@@ -1,0 +1,9 @@
+/* accounts */
+.profile-dropdown {
+  min-width: 100%;
+}
+
+.profile-img {
+  height: 3vh;
+  border-radius: 50%;
+}
