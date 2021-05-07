@@ -2,10 +2,19 @@
 > this empty project includes the following
 
 - Templates (bootstrap)
-    - navbar
+    - [x] navbar
+    - [x] login template
+    - [x] signup template
+    - [ ] logout template
+    - [ ] profile template
+    - [ ] password change template
+    
 - Authentication
-    - login with email
-    - 3rd party login
+    - [x] login with email
+    - [x] 3rd party login
+    - [ ] email verification
+    - [ ] connecting 3rd party account with existing account
+
 
 # Problems
 
