@@ -19,12 +19,12 @@
 # Problems
 
 ## 1. username field
-would like to user username as a non-unique nickname that can be optionally set during signup
+would like to use username as a non-unique nickname that can be set optionally during signup
 
 ### Problem
-even if username field is set to unique=False in CustomUser Model, 
-- django allauth's SignupForm -> clean method -> adapter.save_user
-    - grabs username by data.get("username")
+even if username field is set to `unique=False` in CustomUser Model, 
+- django allauth's SignupForm -> clean method -> adapter.save_user()
+    - grabs username by `data.get("username")`
     - checks if username is unique
 
 ### Solution
