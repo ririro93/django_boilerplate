@@ -49,23 +49,26 @@ class MyCustomSignupForm(SignupForm):
             'placeholder': 'Confirm Password'
         })
 
-        self.fields['username'] = forms.CharField(
+        self.fields['nickname'] = forms.CharField(
             required=False,
             label=False,
             widget=forms.TextInput(
                 attrs={
                     'class': 'form-control',
-                    'id': 'user-username',
+                    'id': 'user-nickname',
                     'placeholder': 'Username (optional)'
                 }
             )
         )
 
     def save(self, request):
-        print('## request', request)
-        username = self.cleaned_data.get('username')
+        nickname = self.cleaned_data.get('nickname')
         user = super(MyCustomSignupForm, self).save(request)
-        print('## MyCustomSignupForm save user', user)
+        if nickname == '':
+            print('no nickname set')
+            user.nickname = 'no username'
+            user.save()
+        print('## new user signup:', user)
         return user
     
     
@@ -80,20 +83,24 @@ class MyCustomSocialSignupForm(SocialSignupForm):
             'placeholder': 'Email'
         })
 
-        self.fields['username'] = forms.CharField(
+        self.fields['nickname'] = forms.CharField(
             required=False,
             label=False,
             widget=forms.TextInput(
                 attrs={
                     'class': 'form-control',
-                    'id': 'user-username',
+                    'id': 'user-nickname',
                     'placeholder': 'Username (optional)'
                 }
             )
         )
 
     def save(self, request):
-        username = self.cleaned_data.get('username')
+        nickname = self.cleaned_data.get('nickname')
         user = super(MyCustomSocialSignupForm, self).save(request)
-        print('## MyCustomSocialSignupForm save user', user)
+        if nickname == '':
+            print('no nickname set')
+            user.nickname = 'no username'
+            user.save()
+        print('## new social user signup:', user)
         return user

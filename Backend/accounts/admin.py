@@ -19,6 +19,6 @@ class CustomUserAdmin(admin.ModelAdmin):
     list_display = (
         'pk',
         'email',
-        'username',
+        'nickname',
         'date_joined',
     )
