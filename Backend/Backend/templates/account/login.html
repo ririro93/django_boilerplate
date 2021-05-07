@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% load socialaccount %}
+
+{% block base_head %}
+<link rel="stylesheet" href="{% static 'css/accounts.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- socials login -->
+<section>
+  <div class="d-flex justify-content-center mt-5">
+    <span class='text-center'>Sign in with other services</span>
+  </div>
+  <div class="d-flex justify-content-center mt-3 mb-3">
+    <a class="btn btn-block btn-social-icon btn-lg btn-github mx-2" href="{% provider_login_url 'github' %}">
+      <span class="fa fa-github" style="font-size: 1.2em;"></span>
+    </a>
+    <a class="btn btn-block btn-social-icon btn-lg btn-google mx-2" href="{% provider_login_url 'google' %}">
+      <span class="fa fa-google" style="font-size: 1.2em;"></span>
+    </a>
+    <a class="btn btn-block btn-social-icon btn-lg btn-facebook mx-2" href="">
+      <span class="fa fa-facebook" style="font-size: 1.2em;"></span>
+    </a>
+    <a class="btn btn-block btn-social-icon btn-lg btn-twitter mx-2" href="{% provider_login_url 'twitter' %}">
+      <span class="fa fa-twitter" style="font-size: 1.2em;"></span>
+    </a>
+  </div>
+</section>
+
+
+<!-- Login -->
+<section class="container">
+  <div class="row">
+    <form class="col-4 offset-4 d-flex flex-column p-0" method='POST' action="{% url 'account_login' %}" enctype="multipart/form-data">
+      {% csrf_token %}
+      <hr>
+      
+      {{ form.as_p }}
+      <!-- to redirect to previous page -->
+      {% if request.GET.next %}
+      <button type='submit' class="btn bg-primary text-white" name="next" value="{{ request.GET.next }}">Login</button>
+      {% else %}
+      <button type='submit' class="btn bg-primary text-white">Login</button>
+      {% endif %}
+    </form>
+  </div>
+  <div class="row mt-3">
+    <div class="col-4 offset-4 text-center"> 
+      <a href="{% url 'account_reset_password' %}" class="text-secondary text-decoration-none d-inline mx-3">Reset Password</a>
+      <a href="{% url 'account_signup' %}" class="text-secondary text-decoration-none d-inline mx-3">Sign up</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
