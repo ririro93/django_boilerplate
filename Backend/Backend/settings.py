@@ -158,7 +158,7 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_USERNAME_REQUIRED = False
-ACCOUNT_USER_MODEL_USERNAME_FIELD = None    # without this, signup checks for unique username
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None       # without this, signup checks for unique username
 ACCOUNT_FORMS = {
     'login': 'accounts.forms.MyCustomLoginForm',
     'signup': 'accounts.forms.MyCustomSignupForm',

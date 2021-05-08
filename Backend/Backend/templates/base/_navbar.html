@@ -28,10 +28,16 @@
               {{ user.email }}
             </a>
             <ul class="dropdown-menu profile-dropdown" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="{% url 'accounts:profile' %}">Profile</a></li>
               <li><a class="dropdown-item" href="#">sth</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="{% url 'account_logout' %}?next={{ request.path }}">Logout</a></li>
+              <li>
+                <!-- <a class="dropdown-item" href="{% url 'account_logout' %}?next={{ request.path }}">Logout</a> -->
+                <form method="POST" action="{% url 'account_logout' %}">
+                  {% csrf_token %}
+                  <button class="logout-btn" type="submit">Logout</button>
+                </form>
+              </li>
             </ul>
           </li>
           {% else %}

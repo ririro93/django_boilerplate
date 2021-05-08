@@ -4,6 +4,19 @@
 }
 
 .profile-img {
+  width: 3vh;
   height: 3vh;
   border-radius: 50%;
+}
+
+.logout-btn {
+  border: none;
+  background-color: #fff;
+  padding: 0.25rem 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.logout-btn:hover {
+  background-color: #e9ecef;
 }

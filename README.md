@@ -5,8 +5,9 @@
     - [x] navbar
     - [x] login template
     - [x] signup template
-    - [ ] logout template
-    - [ ] profile template
+    - [x] logout template
+        - [x] get rid of intermediate logout page
+    - [x] profile template
     - [ ] password change template
     
 - Authentication

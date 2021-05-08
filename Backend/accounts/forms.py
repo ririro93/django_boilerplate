@@ -1,6 +1,8 @@
 from django import forms
 from allauth.account.forms import LoginForm, SignupForm
 from allauth.socialaccount.forms import SignupForm as SocialSignupForm
+from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import UserChangeForm
 
 class MyCustomLoginForm(LoginForm):
     def __init__(self, *args, **kwargs):
@@ -104,3 +106,12 @@ class MyCustomSocialSignupForm(SocialSignupForm):
             user.save()
         print('## new social user signup:', user)
         return user
+
+class ProfileForm(UserChangeForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['nickname'].label = 'Username'
+
+    class Meta(UserChangeForm.Meta):
+        model = get_user_model()
+        fields = ['nickname', 'profile_img', 'password']
