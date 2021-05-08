@@ -8,7 +8,7 @@
     - [x] logout template
         - [x] get rid of intermediate logout page
     - [x] profile template
-    - [ ] password change template
+    - [x] password change template
     
 - Authentication
     - [x] login with email

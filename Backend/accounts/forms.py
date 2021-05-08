@@ -2,7 +2,7 @@ from django import forms
 from allauth.account.forms import LoginForm, SignupForm
 from allauth.socialaccount.forms import SignupForm as SocialSignupForm
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserChangeForm
+from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 
 class MyCustomLoginForm(LoginForm):
     def __init__(self, *args, **kwargs):
@@ -115,3 +115,6 @@ class ProfileForm(UserChangeForm):
     class Meta(UserChangeForm.Meta):
         model = get_user_model()
         fields = ['nickname', 'profile_img', 'password']
+
+# class ChangePwForm(PasswordChangeForm):
+#     class Meta(Pass)
