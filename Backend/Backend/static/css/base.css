@@ -20,3 +20,16 @@
 .logout-btn:hover {
   background-color: #e9ecef;
 }
+
+/* messages */
+.messages {
+  position: relative;
+}
+
+.my-alert {
+  height: 5vh;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

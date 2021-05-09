@@ -35,3 +35,7 @@ even if username field is set to `unique=False` in CustomUser Model,
 - change username field name to nickname
 - add `ACCOUNT_USER_MODEL_USERNAME_FIELD = None` to settings.py
     - without this -> error because allauth uses username internally
+
+
+# Customizing
+- `account/email_confirm.html` : to show that account has been verified via email
