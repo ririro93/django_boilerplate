@@ -9,13 +9,14 @@
         - [x] get rid of intermediate logout page
     - [x] profile template
     - [x] password change template
-    - [ ] confirm-email template
+    - [x] verification email sent template
     
 - Authentication
     - [x] login with email
     - [x] 3rd party login
-    - [x] account activation email
+    - [x] account verification email
         - [blog](https://code4human.tistory.com/83)
+        - [tutorial](https://pythoneatstail.com/en/overview-all-articles/signup-and-password-reset-email-verification-allauth-django/)
     - [ ] connecting 3rd party account with existing account
     - [ ] reset password
 
