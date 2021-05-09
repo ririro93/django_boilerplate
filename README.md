@@ -9,16 +9,18 @@
         - [x] get rid of intermediate logout page
     - [x] profile template
     - [x] password change template
+    - [ ] confirm-email template
     
 - Authentication
     - [x] login with email
     - [x] 3rd party login
-    - [ ] email verification
+    - [x] account activation email
+        - [blog](https://code4human.tistory.com/83)
     - [ ] connecting 3rd party account with existing account
+    - [ ] reset password
 
 
 # Problems
-
 ## 1. username field
 would like to use username as a non-unique nickname that can be set optionally during signup
 

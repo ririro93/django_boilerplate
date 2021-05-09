@@ -67,7 +67,7 @@ class MyCustomSignupForm(SignupForm):
         nickname = self.cleaned_data.get('nickname')
         user = super(MyCustomSignupForm, self).save(request)
         if nickname == '':
-            print('no nickname set')
+            print('## no nickname set')
             user.nickname = 'no username'
             user.save()
         print('## new user signup:', user)
