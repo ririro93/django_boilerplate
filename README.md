@@ -15,7 +15,10 @@
 - Authentication
     - [x] login with email
     - [x] 3rd party login
-    - [ ] 3rd party logout -> require pw to re-login
+        - [tutorial](https://whizzoe.medium.com/in-5-mins-set-up-google-login-to-sign-up-users-on-django-e71d5c38f5d5) : just add OAuth ID + Secret via admin 
+    - [x] social account full logout -> ask social account again for authorization
+        - adding `action='reauthenticate'` param works except for github 
+        - github probably doesn't provide this feature
     - [x] account verification email
         - [blog](https://code4human.tistory.com/83)
         - [tutorial](https://pythoneatstail.com/en/overview-all-articles/signup-and-password-reset-email-verification-allauth-django/)
@@ -39,5 +42,6 @@ even if username field is set to `unique=False` in CustomUser Model,
     - without this -> error because allauth uses username internally
 
 
-# Customizing
-- `account/email_confirm.html` : to show that account has been verified via email
+# Customizable accounts related templates
+- `Backend/Backend/templates/account/*`
+- `Backend/Backend/templates/socialaccount/connections.html`

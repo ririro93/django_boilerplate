@@ -13,16 +13,16 @@
     <span class='text-center'>Sign in with other services</span>
   </div>
   <div class="d-flex justify-content-center mt-3 mb-3">
-    <a class="btn btn-block btn-social-icon btn-lg btn-github mx-2" href="{% provider_login_url 'github' %}">
+    <a class="btn btn-block btn-social-icon btn-lg btn-github mx-2" href="{% provider_login_url 'github' action='reauthenticate' %}">
       <span class="fa fa-github" style="font-size: 1.2em;"></span>
     </a>
-    <a class="btn btn-block btn-social-icon btn-lg btn-google mx-2" href="{% provider_login_url 'google' %}">
+    <a class="btn btn-block btn-social-icon btn-lg btn-google mx-2" href="{% provider_login_url 'google' action='reauthenticate' %}">
       <span class="fa fa-google" style="font-size: 1.2em;"></span>
     </a>
     <a class="btn btn-block btn-social-icon btn-lg btn-facebook mx-2" href="">
       <span class="fa fa-facebook" style="font-size: 1.2em;"></span>
     </a>
-    <a class="btn btn-block btn-social-icon btn-lg btn-twitter mx-2" href="{% provider_login_url 'twitter' %}">
+    <a class="btn btn-block btn-social-icon btn-lg btn-twitter mx-2" href="{% provider_login_url 'twitter' action='reauthenticate' %}">
       <span class="fa fa-twitter" style="font-size: 1.2em;"></span>
     </a>
   </div>
