@@ -18,7 +18,7 @@
         - [blog](https://code4human.tistory.com/83)
         - [tutorial](https://pythoneatstail.com/en/overview-all-articles/signup-and-password-reset-email-verification-allauth-django/)
     - [ ] connecting 3rd party account with existing account
-    - [ ] reset password
+    - [ ] reset password(when forgotten)
 
 
 # Problems

@@ -199,7 +199,7 @@ LOGIN_REDIRECT_URL = 'homepage'
 LOGOUT_REDIRECT_URL = 'homepage'
 
 # Sites
-SITE_ID = 1
+SITE_ID = 2
 
 ## SMTP
 EMAIL_HOST = os.getenv('EMAIL_HOST', 'no EMAIL_HOST')

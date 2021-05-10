@@ -1,13 +1,9 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
-
-<h1>Profile</h1>
-
-<!-- Social connections -->
 <h1>Account Connections</h1>
 
-{% if disconnectForm.accounts %}
+{% if form.accounts %}
 <p>You can sign in to your account using any of the following third party accounts:</p>
 
 
@@ -15,11 +11,11 @@
 {% csrf_token %}
 
 <fieldset>
-{% if disconnectForm.non_field_errors %}
-<div id="errorMsg">{{ disconnectForm.non_field_errors }}</div>
+{% if form.non_field_errors %}
+<div id="errorMsg">{{ form.non_field_errors }}</div>
 {% endif %}
 
-{% for base_account in disconnectForm.accounts %}
+{% for base_account in form.accounts %}
 {% with base_account.get_provider_account as account %}
 <div>
 <label for="id_account_{{ base_account.id }}">
@@ -50,15 +46,5 @@
 </ul>
 
 {% include "socialaccount/snippets/login_extra.html" %}
-
-<hr>
-
-<!-- Username, Password -->
-<form method="POST" action="{% url 'accounts:profile' %}" enctype="multipart/form-data">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" value="Submit">
-</form>
-
 
 {% endblock %}
