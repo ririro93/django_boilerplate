@@ -11,6 +11,7 @@
     - [x] password change template
     - [x] verification email sent template
     - [x] reset password (when forgotten) template
+    - [x] social signup template
     
 - Authentication
     - [x] login with email
