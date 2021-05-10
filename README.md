@@ -10,15 +10,17 @@
     - [x] profile template
     - [x] password change template
     - [x] verification email sent template
+    - [x] reset password (when forgotten) template
     
 - Authentication
     - [x] login with email
     - [x] 3rd party login
+    - [ ] 3rd party logout -> require pw to re-login
     - [x] account verification email
         - [blog](https://code4human.tistory.com/83)
         - [tutorial](https://pythoneatstail.com/en/overview-all-articles/signup-and-password-reset-email-verification-allauth-django/)
-    - [ ] connecting 3rd party account with existing account
-    - [ ] reset password(when forgotten)
+    - [x] connecting 3rd party account with existing account
+    - [x] reset password (when forgotten)
 
 
 # Problems
